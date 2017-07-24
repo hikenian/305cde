@@ -1,2 +1,0 @@
-# hikenMap
-map
