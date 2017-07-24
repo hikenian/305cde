@@ -1,0 +1,201 @@
+<!--  content of API Endpoints --> 
+
+<style>
+  .apitab{
+    display:inline-block; left: 100px; position: absolute;
+  }
+</style>
+
+<div style="font-size:30px;">
+  API Endpoints
+</div>
+<div style="background:lightgray; margin: 10px;overflow:auto;">
+  <div style="font-size:14px;margin: 10px;">User Registration</div>
+  <div style="background:white;font-size:10px; overflow:auto; margin: 10px;">
+    URI <span class="apitab">/user</span><br>
+    Method <span class="apitab">POST</span><br>
+    Data <span class="apitab">{</span><br>
+    <span class="apitab">action: "register"</span><br>
+    <span class="apitab">username: "hiken"</span><br>
+    <span class="apitab">password1: "hipassword1"</span><br>
+    <span class="apitab">password2: "hipassword2"</span><br>
+    <span class="apitab">email: "hiken@email.com"</span><br>
+    <span class="apitab">}</span><br> 
+    Result <span class="apitab">{</span><br>
+    <span class="apitab">status: "success"</span><br>
+    <span class="apitab">}</span><br> 
+    Error <span class="apitab">{</span><br>
+    <span class="apitab">status: "fail"</span><br>
+    <span class="apitab">}</span><br> 
+  </div>
+  
+  <div style="font-size:14px;margin: 10px;">User Login</div>
+  <div style="background:white;font-size:10px; overflow:auto; margin: 10px;">
+    URI <span class="apitab">/user</span><br>
+    Method <span class="apitab">POST</span><br>
+    Data <span class="apitab">{</span><br>
+    <span class="apitab">action: "login"</span><br>
+    <span class="apitab">username: "hiken"</span><br>
+    <span class="apitab">password: "hipassword1"</span><br>
+    <span class="apitab">}</span><br> 
+    Result <span class="apitab">[{</span><br>
+    <span class="apitab">username: "hiken"</span><br>
+    <span class="apitab">password: "hipassword1"</span><br>
+    <span class="apitab">email: "hiken@email.com"</span><br>
+    <span class="apitab">}]</span><br> 
+    Error <span class="apitab">{</span><br>
+    <span class="apitab">status: "fail"</span><br>
+    <span class="apitab">}</span><br> 
+  </div>
+  
+  <div style="font-size:14px;margin: 10px;">Get All Pet Parks</div>
+  <div style="background:white;font-size:10px; overflow:auto; margin: 10px;">
+    URI <span class="apitab">/petpark</span><br>
+    Method <span class="apitab">GET</span><br>
+    Data <span class="apitab">{</span><br>
+    <span class="apitab">action: "getpetpark"</span><br>
+    <span class="apitab">select: "all"</span><br>
+    <span class="apitab">}</span><br> 
+    Result <span class="apitab">[{</span><br>
+    <span class="apitab">Name_en: "Pet park 1 name"</span><br>
+    <span class="apitab">Address_en: "Pet park 1 address"</span><br>
+    <span class="apitab">Ancillary_facilities_en: "Pet park 1 facilities"</span><br>
+    <span class="apitab">Opening_hours_en: "Pet park 1 opening hours"</span><br>
+    <span class="apitab">Longitude: "141.111"</span><br>
+    <span class="apitab">Latitude: "22.111"</span><br>
+    <span class="apitab">Phone: "1111 1111"</span><br>
+    <span class="apitab">}</span><br> 
+    <span class="apitab">{</span><br>
+    <span class="apitab">Name_en: "Pet park 2 name"</span><br>
+    <span class="apitab">Address_en: "Pet park 2 address"</span><br>
+    <span class="apitab">Ancillary_facilities_en: "Pet park 2 facilities"</span><br>
+    <span class="apitab">Opening_hours_en: "Pet park 2 opening hours"</span><br>
+    <span class="apitab">Phone: "2222 2222"</span><br>
+    <span class="apitab">Longitude: "141.222"</span><br>
+    <span class="apitab">Latitude: "22.222"</span><br>
+    <span class="apitab">}]</span><br> 
+    Error <span class="apitab">{</span><br>
+    <span class="apitab">status: "fail"</span><br>
+    <span class="apitab">}</span><br> 
+  </div>
+  
+  <div style="font-size:14px;margin: 10px;">Search Pet Parks with Keywords</div>
+  <div style="background:white;font-size:10px; overflow:auto; margin: 10px;">
+    URI <span class="apitab">/petpark</span><br>
+    Method <span class="apitab">GET</span><br>
+    Data <span class="apitab">{</span><br>
+    <span class="apitab">action: "getpetpark"</span><br>
+    <span class="apitab">select: "search"</span><br>
+    <span class="apitab">keyword: "park"</span><br>
+    <span class="apitab">}</span><br> 
+    Result <span class="apitab">[{</span><br>
+    <span class="apitab">Name_en: "Pet park 1 name"</span><br>
+    <span class="apitab">Address_en: "Pet park 1 address"</span><br>
+    <span class="apitab">Ancillary_facilities_en: "Pet park 1 facilities"</span><br>
+    <span class="apitab">Opening_hours_en: "Pet park 1 opening hours"</span><br>
+    <span class="apitab">Phone: "1111 1111"</span><br>
+    <span class="apitab">Longitude: "141.111"</span><br>
+    <span class="apitab">Latitude: "22.111"</span><br>
+    <span class="apitab">}</span><br> 
+    <span class="apitab">{</span><br>
+    <span class="apitab">Name_en: "Pet park 2 name"</span><br>
+    <span class="apitab">Address_en: "Pet park 2 address"</span><br>
+    <span class="apitab">Ancillary_facilities_en: "Pet park 2 facilities"</span><br>
+    <span class="apitab">Opening_hours_en: "Pet park 2 opening hours"</span><br>
+    <span class="apitab">Phone: "2222 2222"</span><br>
+    <span class="apitab">Longitude: "141.222"</span><br>
+    <span class="apitab">Latitude: "22.222"</span><br>
+    <span class="apitab">}]</span><br> 
+    Error <span class="apitab">{</span><br>
+    <span class="apitab">status: "fail"</span><br>
+    <span class="apitab">}</span><br> 
+  </div>
+  
+  <div style="font-size:14px;margin: 10px;">Get Pet Parks from User Favourite List</div>
+  <div style="background:white;font-size:10px; overflow:auto; margin: 10px;">
+    URI <span class="apitab">/flist</span><br>
+    Method <span class="apitab">GET</span><br>
+    Data <span class="apitab">{</span><br>
+    <span class="apitab">action: "getflist"</span><br>
+    <span class="apitab">username: "hiken"</span><br>
+    <span class="apitab">}</span><br> 
+    Result <span class="apitab">[{</span><br>
+    <span class="apitab">Name_en: "Pet park 1 name"</span><br>
+    <span class="apitab">Address_en: "Pet park 1 address"</span><br>
+    <span class="apitab">Ancillary_facilities_en: "Pet park 1 facilities"</span><br>
+    <span class="apitab">Opening_hours_en: "Pet park 1 opening hours"</span><br>
+    <span class="apitab">Phone: "1111 1111"</span><br>
+    <span class="apitab">Longitude: "141.111"</span><br>
+    <span class="apitab">Latitude: "22.111"</span><br>
+    <span class="apitab">Note: "User 1 edit their own note content."</span><br>
+    <span class="apitab">}</span><br> 
+    <span class="apitab">{</span><br>
+    <span class="apitab">Name_en: "Pet park 2 name"</span><br>
+    <span class="apitab">Address_en: "Pet park 2 address"</span><br>
+    <span class="apitab">Ancillary_facilities_en: "Pet park 2 facilities"</span><br>
+    <span class="apitab">Opening_hours_en: "Pet park 2 opening hours"</span><br>
+    <span class="apitab">Phone: "2222 2222"</span><br>
+    <span class="apitab">Longitude: "141.222"</span><br>
+    <span class="apitab">Latitude: "22.222"</span><br>
+    <span class="apitab">Note: "User 2 edit their own note content."</span><br>
+    <span class="apitab">}]</span><br> 
+    Error <span class="apitab">{</span><br>
+    <span class="apitab">status: "fail"</span><br>
+    <span class="apitab">}</span><br> 
+  </div>
+  
+  <div style="font-size:14px;margin: 10px;">Add Pet Parks to User Favourite List</div>
+  <div style="background:white;font-size:10px; overflow:auto; margin: 10px;">
+    URI <span class="apitab">/flist</span><br>
+    Method <span class="apitab">PUT</span><br>
+    Data <span class="apitab">{</span><br>
+    <span class="apitab">action: "add"</span><br>
+    <span class="apitab">username: "hiken"</span><br>
+    <span class="apitab">fname: "favourite list name"</span><br>
+    <span class="apitab">}</span><br> 
+    Result <span class="apitab">{</span><br>
+    <span class="apitab">status: "success"</span><br>
+    <span class="apitab">fname: "Pet park 1 name"</span><br>
+    <span class="apitab">username: "hiken"</span><br>
+    <span class="apitab">Note: ""</span><br>
+    <span class="apitab">}</span><br> 
+    Error <span class="apitab">{</span><br>
+    <span class="apitab">status: "fail"</span><br>
+    <span class="apitab">}</span><br> 
+  </div>
+  
+    <div style="font-size:14px;margin: 10px;">Delete Pet Parks from User Favourite List</div>
+  <div style="background:white;font-size:10px; overflow:auto; margin: 10px;">
+    URI <span class="apitab">/flist</span><br>
+    Method <span class="apitab">DELETE</span><br>
+    Data <span class="apitab">{</span><br>
+    <span class="apitab">action: "delete"</span><br>
+    <span class="apitab">username: "hiken"</span><br>
+    <span class="apitab">fname: "favourite list name"</span><br>
+    <span class="apitab">}</span><br> 
+    Result <span class="apitab">{</span><br>
+    <span class="apitab">status: "success"</span><br>
+    <span class="apitab">}</span><br> 
+    Error <span class="apitab">{</span><br>
+    <span class="apitab">status: "fail"</span><br>
+    <span class="apitab">}</span><br> 
+  </div>
+ 
+  <div style="font-size:14px;margin: 10px;">Save User Favourite List Item</div>
+  <div style="background:white;font-size:10px; overflow:auto; margin: 10px;">
+    URI <span class="apitab">/flist</span><br>
+    Method <span class="apitab">POST</span><br>
+    Data <span class="apitab">{</span><br>
+    <span class="apitab">action: "save"</span><br>
+    <span class="apitab">username: "hiken"</span><br>
+    <span class="apitab">fname: "favourite list name"</span><br>
+    <span class="apitab">}</span><br> 
+    Result <span class="apitab">{</span><br>
+    <span class="apitab">status: "success"</span><br>
+    <span class="apitab">}</span><br> 
+    Error <span class="apitab">{</span><br>
+    <span class="apitab">status: "fail"</span><br>
+    <span class="apitab">}</span><br> 
+  </div>
+  
+</div>

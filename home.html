@@ -1,0 +1,47 @@
+<!--  content of home page --> 
+
+<div class="homecontent" >
+	Take Care of your Pet! Play with them!
+</div>
+
+<!--  a slideshow using js swipe event--> 
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+					  <div class="swiper-slide"><img src="/image/dogplay.jpg" style="height:200px"><div class="text">Play with your pet!</div></div>
+            <div class="swiper-slide"><img src="/image/petchoose.jpg" style="height:200px"><div class="text">Choose a right pet!</div></div>
+            <div class="swiper-slide"><img src="/image/petcare.jpg" style="height:200px"><div class="text">Health care of your pet!</div></div>
+            <div class="swiper-slide"><img src="/image/petfood.jpg" style="height:200px"><div class="text">Give your pet nutrition!</div></div>
+            <div class="swiper-slide"><img src="/image/petclean.jpg" style="height:200px"><div class="text">Clean your pet!</div></div>
+            <div class="swiper-slide"><img src="/image/petabuse.jpg" style="height:200px"><div class="text">Stop abuse your pet!</div></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+				loop: true,
+			 // effect: 'fade'
+    });
+    </script>
+
+<div class="homecontent link"  onclick="hiOpenHow()">
+	How to take care of your pet?
+</div>
+<p class="homecontent link"  onclick="hiOpenHow()">
+	<img src="/image/pet.jpg" style=" width:320px;height:160px;">
+</p>
+<div class="homecontent link"  onclick="hiOpenPetPark()">
+	Where to play with pet?
+</div>
+<p class="homecontent link"  onclick="hiOpenPetPark()">
+	<img src="/image/park.png" style=" width:320px;height:220px;">
+</p>
