@@ -1,0 +1,262 @@
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height:400px;
+}
+  
+@media screen and (max-width: 600px) {
+  #map {top: 0px; bottom:45px}  
+}
+
+.backgroundColor {
+  background: white;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  position: fixed;
+}
+
+.homecontent{
+  text-align:center; 
+  font-size:18px;
+}
+.homecontent.link{
+  cursor: pointer;
+}
+
+.createPageContainer {
+  position: absolute;
+  z-index: 1;
+  top:45px;
+  width:100%;
+  font-size: 10px;
+  padding: 10px 10px;
+  overflow: hidden;
+} 
+
+.containerTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 5;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Carter One', cursive;
+  font-size: 11px;
+  color: black;
+  height: 100%;
+}
+
+input[type=text],
+input[type=password],
+input[type=select] {
+  width: 100%;
+  padding: 9px 10px;
+  margin: 2px 0;
+  display: inline-block;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+  padding: 9px 10px;
+    box-sizing: border-box;
+  border: 1px solid lightgray;
+    resize: none;
+}
+
+/* Set a style for all buttons */
+
+button {
+  font-family: 'Carter One', cursive;
+  background-color: limegreen;
+  color: white;
+  padding: 10px 10px;
+  margin: 2px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.blabel {
+  color: white;
+  font-size: 20px;
+  margin: 0px;
+  text-shadow: -1px -1px 1px black, -1px 0px 1px black, -1px 1px 1px black, 0px 1px 1px black, 1px 1px 1px black, 1px 0px 1px black, 1px 1px 1px black, 0px -1px 1px black;
+}
+
+.slabel {
+  color: white;
+  font-size: 15px;
+  margin: 0;
+  text-shadow: -1px -1px 1px black, -1px 0px 1px black, -1px 1px 1px black, 0px 1px 1px black, 1px 1px 1px black, 1px 0px 1px black, 1px 1px 1px black, 0px -1px 1px black;
+}
+
+.sslabel {
+  color: white;
+  font-size: 11px;
+  margin: 0;
+  text-shadow: -1px -1px 1px black, -1px 0px 1px black, -1px 1px 1px black, 0px 1px 1px black, 1px 1px 1px black, 1px 0px 1px black, 1px 1px 1px black, 0px -1px 1px black;
+}
+
+.bbutton {
+  font-size: 15px;
+  color: white;
+  background-color: limegreen;
+  width: 100%;
+  padding: 8px 0px;
+  margin: 2px 0;
+  text-align: center;
+}
+
+.bbutton:hover,
+.bbutton:focus {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.sbutton {
+  font-size: 11px;
+  color: dimgray;
+  border: 1px solid dimgray;
+  padding: 5px 8px;
+  margin: 2px 0;
+  text-align: center;
+}
+
+.sbutton:hover,
+.sbutton:focus {
+  cursor: pointer;
+  background:lightgray;
+}
+
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid lightgray;
+  margin: 2px 0;
+  background-color: white;
+  font: 11px 'Carter One';
+  border-radius: 10px;
+}
+
+
+/* Add a black background color to the top navigation */
+
+
+
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home").
+Show the link that contains should open and close the topnav (.icon)
+.topnav a:not(:first-child) {display: none;}
+
+
+  border-bottom: 1px solid dimgray;
+
+*/
+
+
+.desktopTopBar {
+  display:block;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0px dimgray;
+}
+
+.mobileBottomBar {
+  display:none;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  bottom: 0px;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0px dimgray;
+}
+
+
+.mbbItem {
+  height: 45px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px gray;
+}
+
+.mbbItem a {
+  transition: background-color .3s;
+  display: block;
+  background: white;
+  color: white;
+  padding: 11px 13px;
+  text-decoration: none;
+}
+
+.mbbItem a:hover {
+  background: lightgray;
+}
+
+.mobileMenu {
+  display:none;
+  margin: 0px;
+  transition: max-height 0.5s;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  /* Full width */
+  left: 50%;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+  top: 45px;
+  max-height: 0px;
+  z-index: 2;
+  box-shadow: 0px 0px 20px 0px dimgray;
+}
+
+.mobileMenu a {
+  display: block;
+  transition: background-color .3s;
+  text-align: center;
+  padding: 11px 13px;
+  text-decoration: none;
+}
+
+.mobileMenuItem {
+  background: white;
+  box-shadow: 0px 0px 10px 0px gray;
+}
+
+.mobileMenuItem a:hover {
+  background: lightgray;
+}
+
+@media screen and (max-width: 600px) {
+  .mobileBottomBar {display:block;}
+  .desktopTopBar {display:none;}
+  .createPageContainer {top:0px;padding-bottom:45px}
+  .mobileMenu{top:auto;bottom:45px;display:block;}
+  
+}

@@ -1,0 +1,51 @@
+.popupModal{
+  visibility: hidden;
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  transition: opacity 0.5s;
+  opacity:0;
+  overflow: auto;
+  
+}
+
+.popupContainer{
+  width: 80%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: 2px 2px 10px dimgray;
+}
+
+.popupTitle{
+  padding:5px 10px;
+  background-color:lightgray;
+  text-align:center;
+}
+
+.popupContent{
+  padding:5px 10px;
+  overflow: auto;
+}
+
+.closePopup{
+  top:0px;
+  right:0px;
+  margin:0px;
+  padding:5px 10px;
+  font-size: 20px;
+  position:absolute;
+}
+
+.closePopup:hover,
+.closePopup:focus{
+  color: red;
+  cursor: pointer;
+}
