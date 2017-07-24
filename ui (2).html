@@ -1,0 +1,140 @@
+<!--  ui.html will be used for index.html -->
+
+<!--  Top menu bar for desktop monitor -->
+
+<div id="hiDesktopTopBar" class="desktopTopBar">
+  <div id="loginItem" style="float: right;" class="mbbItem">
+    <a class="slabel" href="javascript:void(0);" onclick="hiOpenLoginForm()">Login</a>
+  </div>
+  <div style="float: right;" class="mbbItem">
+    <a class="slabel" href="javascript:void(0);" onclick="hiOpenAPI()">API Endpoints</a>
+  </div>  
+  
+  <div style="float: right;" class="mbbItem">
+    <a class="slabel" href="javascript:void(0);" onclick="hiOpenFavouriteList()">Favourite List</a>
+  </div>
+      
+  <div style="float: right;" class="mbbItem">
+    <a class="slabel" href="javascript:void(0);" onclick="hiOpenPetPark()">Where?</a>
+  </div>
+      
+  <div style="float: right;" class="mbbItem">
+    <a class="slabel" href="javascript:void(0);" onclick="hiOpenHow()">How?</a>
+  </div>
+  
+  <div style="width:auto; overflow:hidden;" class="mbbItem">
+    <a id="titleItem" class="slabel" href="javascript:void(0);" onclick="hiOpenIndex()">Pet Care</a>
+  </div>
+</div>
+
+
+<!--  Bottom menu bar for mobile phone -->
+
+<div id="hiMobileBottomBar" class="mobileBottomBar">
+   <div style="float: right;" class="mbbItem">
+     <a class="slabel" href="javascript:void(0);" onclick="hiOpenMobileMenu()">&#9776;</a>
+   </div>   
+	<div id="loginItem2" style="float: right;" class="mbbItem">
+		<a class="slabel" href="javascript:void(0);" onclick="hiOpenLoginForm()">Login</a>
+	</div>
+	<div style="width:auto; overflow:hidden;" class="mbbItem">
+		<a id="titleItem2" class="slabel" href="javascript:void(0);" onclick="hiOpenIndex()">Pet Care</a>
+	</div>
+</div>
+
+
+<div id="hiMobileMenu" class="mobileMenu">
+	<div class="mobileMenuItem" style="">
+		<a class="sslabel" href="javascript:void(0);" onclick="hiOpenHow()">How?</a>
+	</div>
+  <div class="mobileMenuItem" style="">
+    <a class="sslabel" href="javascript:void(0);" onclick="hiOpenPetPark()">Where?</a>
+  </div>
+  <div class="mobileMenuItem" style="">
+    <a class="sslabel" href="javascript:void(0);" onclick="hiOpenFavouriteList()">Favourite List</a>
+  </div>
+  <div class="mobileMenuItem" style="">
+    <a class="sslabel" href="javascript:void(0);" onclick="hiOpenAPI()">API Endpoints</a>
+  </div>
+</div>
+
+ 
+<!--  Popup Login form -->
+      
+<div id="hiLoginModal" class="popupModal">
+  <div class="popupContainer">
+    <form id="hiLogin" method="post" action="/login">
+      <div class="popupTitle">
+        <div class="closePopup" onclick="hiOpenLoginForm()">&#x2716;</div>
+          <div class="blabel">Login</div>
+        </div>
+        <div class="popupContent">
+        <div class="slabel">Username</div>
+        <input id="logUsername" type="text" placeholder="enter your username here" name="username" required>
+        <div class="slabel">Password</div>
+        <input id="logPassword" type="password" placeholder="enter your password here" name="password" required>
+        <div class="bbutton" style="float:left" onclick="hiLogin()">Enter</div>
+        <div class="bbutton" style="background:royalblue;float:left" onclick="fbLogin()">Facebook Login</div>
+        <div class="sbutton" style="float:left" onclick="hiOpenRegisterForm()">Register?</div>
+        <div class="sbutton" style="float:right" onclick="hiEmailPassword()">Forgot password?</div>
+        </div>
+     </form>      
+  </div> 
+</div>
+
+
+<!--  Popup registration form -->
+
+<div id="hiRegisterContainer" class="popupModal">
+  <div class="popupContainer">
+    <form id="hiRegister" method="post" action="/register">
+       <div class="popupTitle">
+         <div class="closePopup" onclick="hiOpenRegisterForm()">&#x2716;</div>
+         <div class="blabel">Register</div>
+       </div>
+        <div class="popupContent">
+          <div class="slabel">Username</div>
+          <input id="regUsername" type="text" placeholder="enter your username" name="username" required>
+          <div class="slabel">Password</div>
+          <input id="regPassword1" type="password" placeholder="enter your password" name="password1" required>
+          <div class="slabel">Confirm Password</div>
+          <input id="regPassword2" type="password" placeholder="enter password again" name="password2" required>
+          <div class="slabel">Email</div>
+          <input id="regEmail" type="text" placeholder="enter your email" name="email" required>
+          <div class="bbutton" style="float:left" onclick="hiRegister()">Enter</div>
+       </div>
+     </form>
+  </div> 
+</div>
+
+
+<!--  Popup google map form -->
+
+<div  id="hiMapModal" class="popupModal">
+  <div class="popupContainer">
+     <div class="popupTitle">
+         <div class="closePopup" onclick="hiOpenMapForm()">&#x2716;</div>
+         <div class="blabel">Map</div>
+       </div>
+    <div style="height: 410px;" class="popupContent">
+       <div style="height: 400px;" id="map"></div>    
+    </div>
+  </div> 
+</div>
+
+
+<!--  JS for verifing login status -->
+
+<script>	
+	  if (sessionStorage.fb){
+			$("#titleItem").html("Pet Care (FB: " + sessionStorage.fb + ")");
+			$("#titleItem2").html("Pet Care (FB: " + sessionStorage.fb + ")");
+			$("#loginItem").html("<a class='slabel' href='javascript:void(0);' onclick='hiLogout()'>Logout</a>");
+			$("#loginItem2").html("<a class='slabel' href='javascript:void(0);' onclick='hiLogout()'>Logout</a>");
+		}else if (sessionStorage.username){
+			$("#titleItem").html("Pet Care (id: " + sessionStorage.username + ")");
+			$("#titleItem2").html("Pet Care (id: " + sessionStorage.username + ")");
+			$("#loginItem").html("<a class='slabel' href='javascript:void(0);' onclick='hiLogout()'>Logout</a>");
+			$("#loginItem2").html("<a class='slabel' href='javascript:void(0);' onclick='hiLogout()'>Logout</a>");
+		}
+</script>	
