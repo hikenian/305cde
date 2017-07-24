@@ -1,0 +1,49 @@
+.createChatroomContainer{
+  top:0px;
+  visibility: visible;
+  position: absolute; /* Stay in place */
+  z-index: -5; /* Sit on top */
+    width:100%;
+}
+
+.chatroomContent{
+      background-color: gray;
+
+}
+
+.chatroomItem{
+  margin:10px 10px 0px 10px;
+  box-shadow: 0px 0px 20px gray;
+  clear: both;
+  background-color:white;
+  max-width:90%;
+  border-radius: 10px;
+  overflow:hidden;
+}
+
+.talkContent{
+    background-color: wheat;
+    overflow: hidden;
+    position: fixed;
+    width: 100%; /* Full width */
+    bottom: 0px;
+    z-index:2;
+    
+}
+
+.chatName{
+  background-color:wheat;
+  font-size:8px; 
+  padding:5px 10px 2px 10px;
+  margin:0px;
+  border-bottom: 1px solid gray;
+}
+
+.chatContent{
+  padding:2px 10px 5px 10px; 
+  margin:0px;
+}
+
+@media screen and (max-width: 600px) {
+.talkContent{bottom: 45px;}
+}

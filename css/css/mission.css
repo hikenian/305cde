@@ -1,0 +1,8 @@
+.createMissionContainer{
+  display: block;
+  visibility: visible;
+  position: absolute;
+  z-index: -5; 
+  width:100%;
+  font-size:10px;
+}

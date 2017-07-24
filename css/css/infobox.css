@@ -1,0 +1,65 @@
+.pageTitleContainer{
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  text-align:center;
+}
+
+.infoboxContainer{
+  width: 100%;
+  background-color: white;
+  position: relative;
+  margin: 0px auto 10px auto;
+  overflow: auto;
+  box-shadow: 2px 2px 10px lightgray;
+}
+
+.infoboxTitle{
+  background-color:lightgray;
+  text-align:center;
+  font-size:12px;
+}
+
+.infoboxTitle:hover,
+.infoboxTitle:focus{
+  background-color:yellow;
+  cursor: pointer;
+}
+
+.savenote{
+  cursor: pointer;
+}
+
+.infoboxContent{
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height .8s;
+}
+
+.closeInfobox{
+  position: absolute;
+  right: 10px;
+  font-size:15px;
+}
+
+.closeInfobox:hover,
+.closeInfobox:focus{
+  color: red;
+  cursor: pointer;
+}
+
+.infoboxItem{
+  padding: 5px 10px;
+}
+
+.infoItemLeft{
+  float:left;
+  padding:0px 0px 0px 5px;
+  vertical-align: middle;
+}
+
+.infoItemRight{
+  float:right;
+  padding:0px 5px 0px 0px;
+  vertical-align: middle;
+}
